@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# Aplicativo de Consulta de Personagens de Harry Potter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um aplicativo web construído em React com estilos em SCSS que permite aos usuários consultar informações sobre os personagens da saga Harry Potter. Ele faz uso da API pública [HP-API](https://hp-api.onrender.com/api/characters)
 
-## Available Scripts
+## Visualização do Projeto
 
-In the project directory, you can run:
+Você pode visualizar o projeto hospedado [aqui](https://desafio-stefanini.vercel.app/).
 
-### `npm start`
+## Requisitos do Sistema
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Certifique-se de ter o seguinte software instalado em seu sistema:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js 16 ou superior
+- npm (gerenciador de pacotes do Node.js)
 
-### `npm test`
+## Configuração
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone este repositório para sua máquina local:
 
-### `npm run build`
+```javascript
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navegue até o diretório do projeto:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```javascript
+cd nome-do-repositorio
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Instale as dependências do projeto:
 
-### `npm run eject`
+```javascript
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Executando o Aplicativo
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para iniciar o aplicativo localmente, execute o seguinte comando:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```javascript
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Isso iniciará o aplicativo em modo de desenvolvimento. Abra [http://localhost:3000](http://localhost:3000) no seu navegador para visualizar o aplicativo.
 
-## Learn More
+## Construção de Produção
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para criar uma versão otimizada para produção, execute o seguinte comando:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```javascript
+npm run build
+```
+
+Isso criará uma pasta `build` na raiz do projeto com os arquivos estáticos prontos para implantação.
