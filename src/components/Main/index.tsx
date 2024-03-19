@@ -1,14 +1,27 @@
 import React from "react";
-import "../../style/Header.scss";
+import "../../style/Main.scss";
 
-const Body: React.FC = () => {
+import Cards from "./Cards";
+
+const Main: React.FC = () => {
   return (
-    <div className="my-component">
-      <h1>Hello, world!</h1>
-      <p>This is my styled component.</p>
-
-    </div>
+    <>
+      <div className="title">
+        <h1>Seja bem-vindo!</h1>
+        <h2>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt
+          porta rutrum.{" "}
+        </h2>
+      </div>
+      <div className="cards">
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+      </div>
+    </>
   );
 };
 
-export default Body;
+export default Main;
