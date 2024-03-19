@@ -2,21 +2,45 @@ import React from "react";
 
 import "../../../style/Main.scss";
 
+import { Character } from "../../../interface/Character"; 
 
-const Cards: React.FC = () => {
+interface CardsProps {
+  character: Character;
+}
+
+const Cards: React.FC<CardsProps> = ({ character }) => {
+
   return (
     <>
       <div className="card">
-        <img src="https://ik.imagekit.io/hpapi/umbridge.jpg" alt="Avatar" />
+        <img src={character.image ? character.image : "https://i.pinimg.com/originals/d0/38/1f/d0381f8d14f762209f24a90964fb2be1.jpg"} alt={character.name} />
         <div className="container">
           <h4>
-            <b>Nome</b>
+            <b>{character.name}</b>
           </h4>
-          <p><b>Nascimento:</b> Architect & Engineer</p>
-          <p><b>Casa:</b> Architect & Engineer</p>
-          <p><b>Patrono:</b> Architect & Engineer</p>
-          <p><b>Ator:</b> Architect & Engineer</p>
-          <p><b>Vivo:</b> Architect & Engineer</p>
+          {character.dateOfBirth && (
+            <p>
+              <b>Nascimento:</b> {character.dateOfBirth}
+            </p>
+          )}
+          {character.house && (
+            <p>
+              <b>Casa:</b> {character.house}
+            </p>
+          )}
+          {character.patronus && (
+            <p>
+              <b>Patrono:</b> {character.patronus}
+            </p>
+          )}
+          {character.actor && (
+            <p>
+              <b>Ator:</b> {character.actor}
+            </p>
+          )}
+          <p>
+            <b>Vivo:</b> {character.alive ? "Sim" : "Não"}
+          </p>
         </div>
       </div>
     </>

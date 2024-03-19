@@ -33,7 +33,7 @@
 
     img {
       height: auto;
-      max-height: 350px;
+      height: 450px;
       object-fit: cover;
       width: 100%;
     }
@@ -49,5 +49,6 @@
 
   .container {
     padding: 2px 16px;
+    min-height: 205px;
   }
 }

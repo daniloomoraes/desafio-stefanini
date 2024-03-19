@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../style/Main.scss";
 
 import Cards from "./Cards";
 
+import { Character } from "../../interface/Character"; 
+
 const Main: React.FC = () => {
+  const [characters, setCharacters] = useState<Character[]>([]); 
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("https://hp-api.onrender.com/api/characters");
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        const data: Character[] = await response.json();
+        setCharacters(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <>
       <div className="title">
@@ -14,11 +35,9 @@ const Main: React.FC = () => {
         </h2>
       </div>
       <div className="cards">
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
+        {characters.map((character, index) => (
+          <Cards key={index} character={character} />
+        ))}
       </div>
     </>
   );
